@@ -1,55 +1,133 @@
-
 /* Dark theme CSS */
 body {
-    background-color: #121212;
-    color: #e0e0e0;
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
+  background-color: #121212;
+  color: #e0e0e0;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
 }
 
 header, footer {
-    background: #1f1f1f;
-    color: #e0e0e0;
-    text-align: center;
-    padding: 1rem 0;
+  background: #1f1f1f;
+  color: #e0e0e0;
+  text-align: center;
+  padding: 1rem 0;
 }
 
 .logo {
-    border-radius: 50%;
-    width: 100px;
-    height: auto;
+  border-radius: 50%;
+  width: 100px;
+  height: auto;
+}
+
+.about-image {
+  max-width: 300px;
+  border: 2px solid #333;
+  border-radius: 5px;
+  display: block;
+  margin: 1rem auto;
 }
 
 nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 nav ul li {
-    display: inline;
-    margin: 0 10px;
+  display: inline;
+  margin: 0 10px;
 }
 
 nav ul li a {
-    color: #e0e0e0;
-    text-decoration: none;
+  color: #e0e0e0;
+  text-decoration: none;
 }
 
 section {
-    padding: 2rem;
+  padding: 2rem;
 }
 
 .gallery {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
 }
 
-.gallery iframe, .gallery img {
-    border: 2px solid #333;
-    border-radius: 5px;
+.gallery img {
+  border: 2px solid #333;
+  border-radius: 5px;
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+}
+
+/* Tree diagram styling */
+.tree ul {
+  padding-top: 20px;
+  position: relative;
+  transition: all 0.5s;
+  display: flex;
+  justify-content: center;
+}
+
+.tree li {
+  list-style-type: none;
+  position: relative;
+  padding: 20px 5px 0 5px;
+  text-align: center;
+}
+
+.tree li::before, .tree li::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 50%;
+  border-top: 1px solid #ccc;
+  width: 50%;
+  height: 20px;
+}
+
+.tree li::after {
+  right: auto;
+  left: 50%;
+  border-left: 1px solid #ccc;
+}
+
+.tree li:only-child::after, 
+.tree li:only-child::before {
+  display: none;
+}
+
+.tree li:only-child {
+  padding-top: 0;
+}
+
+.tree li:first-child::before {
+  border: 0 none;
+}
+
+.tree li:last-child::after {
+  border: 0 none;
+}
+
+.tree ul ul::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  border-left: 1px solid #ccc;
+  width: 0;
+  height: 20px;
+}
+
+.node {
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  display: inline-block;
+  background-color: #1f1f1f;
+  color: #e0e0e0;
 }
