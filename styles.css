@@ -1,0 +1,55 @@
+
+/* Dark theme CSS */
+body {
+    background-color: #121212;
+    color: #e0e0e0;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+header, footer {
+    background: #1f1f1f;
+    color: #e0e0e0;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+.logo {
+    border-radius: 50%;
+    width: 100px;
+    height: auto;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #e0e0e0;
+    text-decoration: none;
+}
+
+section {
+    padding: 2rem;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.gallery iframe, .gallery img {
+    border: 2px solid #333;
+    border-radius: 5px;
+}
